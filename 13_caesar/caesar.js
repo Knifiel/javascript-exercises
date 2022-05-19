@@ -1,6 +1,5 @@
 const caesar = function(string, shiftFactor) {
 const arr = string.split('');
-const shiftArr = [];
 newString = "";
     if ((shiftFactor>26) || (shiftFactor < -26)){
         shiftFactor = shiftFactor % 26;
@@ -18,7 +17,6 @@ newString = "";
             char = 91 - (65 - char)
         }
         char = String.fromCharCode(char);
-        shiftArr.push(char);
         if (arr[i].match(/[a-z]/)){
             newString += char.toLowerCase();
         } else {
